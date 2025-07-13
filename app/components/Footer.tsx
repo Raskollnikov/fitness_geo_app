@@ -15,12 +15,12 @@ const Footer = () => {
               <div className="p-1 bg-primary/10 rounded">
                 <ZapIcon className="w-4 h-4 text-primary" />
               </div>
-              <span className="text-xl font-bold font-mono">
-                code<span className="text-primary">flex</span>.ai
-              </span>
+             <span className="text-xl font-bold font-mono">
+              ქართული <span className="text-primary">ფიტნეს</span> აპლიკაცია
+            </span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} codeflex.ai - All rights reserved
+              © {new Date().getFullYear()} ყველა უფლება დაცულია
             </p>
           </div>
 
@@ -30,44 +30,44 @@ const Footer = () => {
               href="/about"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              About
+              ჩვენს შესახებ
             </Link>
             <Link
               href="/terms"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Terms
+              პირობები
             </Link>
             <Link
               href="/privacy"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Privacy
+              უსაბრთხოება
             </Link>
             <Link
               href="/contact"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Contact
+              კონტაქტი
             </Link>
             <Link
               href="/blog"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Blog
+              ბლოგი
             </Link>
             <Link
               href="/help"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Help
+              დახმარება
             </Link>
           </div>
 
           {/* Status */}
           <div className="flex items-center gap-2 px-3 py-2 border border-border rounded-md bg-background/50">
             <div className="w-2 h-2 rounded-full bg-green-500"></div>
-            <span className="text-xs font-mono">SYSTEM OPERATIONAL</span>
+            <span className="text-xs font-mono">სისტემაშია</span>
           </div>
         </div>
       </div>

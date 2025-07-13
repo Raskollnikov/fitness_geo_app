@@ -30,8 +30,8 @@ const UserPrograms = () => {
           {/* HEADER CONTENT */}
           <div className="p-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-foreground">AI-Generated </span>
-              <span className="text-primary">Programs</span>
+              <span className="text-foreground">AI </span>
+              <span className="text-primary">პროგრამები</span>
             </h2>
 
             <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
