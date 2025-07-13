@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import ProfileHeader from "../components/ProfileHeader";
 import NoFitnessPlan from "../components/NoFitnessPlan";
 import CornerElements from "../components/CornerElements";
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { AppleIcon, CalendarIcon, DumbbellIcon } from "lucide-react";
 import {
