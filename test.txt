@@ -1,0 +1,6 @@
+age
+weight
+height
+fitnes_goal
+number of the days 
+fitnes level
