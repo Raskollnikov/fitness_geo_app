@@ -30,7 +30,7 @@ const Navbar = () => {
                 className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
               >
                 <HomeIcon size={16} />
-                <span>Home</span>
+                <span>მთავარი</span>
               </Link>
 
               <Link
@@ -38,14 +38,14 @@ const Navbar = () => {
                 className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
               >
                 <UserIcon size={16} />
-                <span>Profile</span>
+                <span>პროფილი</span>
               </Link>
               <Button
                 asChild
                 variant="outline"
                 className="ml-2 border-primary/50 text-primary hover:text-white hover:bg-primary/10"
               >
-                <Link href="/generate-program">Get Started</Link>
+                <Link href="/generate-program">დაწყება</Link>
               </Button>
               <UserButton />
             </>

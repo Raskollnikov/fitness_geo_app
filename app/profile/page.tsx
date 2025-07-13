@@ -56,6 +56,14 @@ type Plan = {
   createdAt: string;
 };
 
+const fitnessGoalTranslations: Record<string, string> = {
+  "weight_loss": "წონის კლება",
+  "muscle_gain": "კუნთის მატება",
+  "maintenance": "ფორმის შენარჩუნება",
+  "improved_endurance": "გამძლეობის გაუმჯობესება",
+};
+
+
 const ProfilePage = () => {
   const { user } = useUser();
   const [plans, setPlans] = useState<Plan[]>([]);
@@ -98,11 +106,11 @@ const ProfilePage = () => {
           <CornerElements />
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-bold tracking-tight">
-              <span className="text-primary">Your</span>{" "}
-              <span className="text-foreground">Fitness Plans</span>
+              <span className="text-primary">შენი</span>{" "}
+              <span className="text-foreground">ფიტნეს მიზნები</span>
             </h2>
             <div className="font-mono text-xs text-muted-foreground">
-              TOTAL: {plans.length}
+              ჯამში: {plans.length}
             </div>
           </div>
 
@@ -131,31 +139,31 @@ const ProfilePage = () => {
         <div className="relative backdrop-blur-sm border border-border rounded-lg p-6">
           <CornerElements />
 
-          <h3 className="text-lg font-bold mb-4 text-primary">Your Profile Info</h3>
+          <h3 className="text-lg font-bold mb-4 text-primary">შენი ინფორმაცია</h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <div className="text-sm">
-              <span className="text-muted-foreground">Age:</span>{" "}
+              <span className="text-muted-foreground">ასაკი:</span>{" "}
               {currentPlan.formData?.age || "N/A"}
             </div>
             <div className="text-sm">
-              <span className="text-muted-foreground">Weight:</span>{" "}
+              <span className="text-muted-foreground">წონა:</span>{" "}
               {currentPlan.formData?.weight} kg
             </div>
             <div className="text-sm">
-              <span className="text-muted-foreground">Height:</span>{" "}
+              <span className="text-muted-foreground">სიმაღლე:</span>{" "}
               {currentPlan.formData?.height} cm
             </div>
             <div className="text-sm">
-              <span className="text-muted-foreground">Fitness Level:</span>{" "}
+              <span className="text-muted-foreground">მდგომარეობა:</span>{" "}
               {currentPlan.formData?.fitnessLevel || "N/A"}
             </div>
             <div className="text-sm">
-              <span className="text-muted-foreground">Goal:</span>{" "}
-              {currentPlan.formData?.fitnessGoal?.replace("_", " ") || "N/A"}
+              <span className="text-muted-foreground">მიზანი:</span>{" "}
+{fitnessGoalTranslations[currentPlan.formData?.fitnessGoal?.toLowerCase() || ""] || currentPlan.formData?.fitnessGoal}
             </div>
             <div className="text-sm">
-              <span className="text-muted-foreground">Days/Week:</span>{" "}
+              <span className="text-muted-foreground">დღე/კვირაში:</span>{" "}
               {currentPlan.formData?.numberOfDays}
             </div>
           </div>
@@ -183,7 +191,7 @@ const ProfilePage = () => {
                   className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
                 >
                   <DumbbellIcon className="mr-2 size-4" />
-                  Workout Plan
+                  ვარჯიშის გეგმა
                 </TabsTrigger>
 
                 <TabsTrigger
@@ -191,7 +199,7 @@ const ProfilePage = () => {
                   className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
                 >
                   <AppleIcon className="mr-2 h-4 w-4" />
-                  Diet Plan
+                  დიეტის გეგმა
                 </TabsTrigger>
               </TabsList>
 
@@ -216,7 +224,7 @@ const ProfilePage = () => {
                           <div className="flex justify-between w-full items-center">
                             <span className="text-primary">{exerciseDay.day}</span>
                             <div className="text-xs text-muted-foreground">
-                              {exerciseDay.routines.length} EXERCISES
+                              {exerciseDay.routines.length} ვარჯიში
                             </div>
                           </div>
                         </AccordionTrigger>
@@ -234,10 +242,10 @@ const ProfilePage = () => {
                                   </h4>
                                   <div className="flex items-center gap-2">
                                     <div className="px-2 py-1 rounded bg-primary/20 text-primary text-xs font-mono">
-                                      {routine.sets} SETS
+                                      {routine.sets} ცდა
                                     </div>
                                     <div className="px-2 py-1 rounded bg-secondary/20 text-secondary text-xs font-mono">
-                                      {routine.reps} REPS
+                                      {routine.reps} გამეორება
                                     </div>
                                   </div>
                                 </div>

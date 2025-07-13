@@ -147,7 +147,7 @@ function DietForm({}) {
             <option value="weight_loss">წონის კლება</option>
             <option value="muscle_gain">კუნთის მატება</option>
             <option value="maintenance">ფორმის შენარჩუნება</option>
-            <option value="improved_endurance">Improved Endurance</option>
+            <option value="improved_endurance">გამძლეობის გაუმჯობესობა</option>
           </select>
         </div>
 

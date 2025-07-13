@@ -68,7 +68,9 @@ export async function generateDietPlan(formData: any) {
   - "sets" and "reps" MUST be numbers (not strings)
   - For cardio, use numeric reps/sets (e.g., "sets": 1, "reps": 1)
   - Return ONLY this JSON format:
-
+  -can you try Georgian language ? i mean give me all the data in  Geo language give me diet plan in georgian
+  -if there is a word 'რბოლა' change with 'ძუნძული' or 'სირბილი'
+  -Breakfast-საუზმე Lunch-სადილი Snack-სნექი Dinner-ვახშამი Post-workout snack-ვარჯიშის შემდგომ
   {
     "schedule": ["Monday", "Wednesday", "Friday"],
     "exercises": [
@@ -100,6 +102,10 @@ export async function generateDietPlan(formData: any) {
   - "meals" (array of meals with "name" and "foods")
   - DO NOT add any other fields
 
+  -can you try Georgian language ? i mean give me all the data in  Geo language give me diet plan in georgian
+  -if there is a word 'რბოლა' change with 'ძუნძული' or 'სირბილი'
+  -Breakfast-საუზმე Lunch-სადილი Snack-სნექი Dinner-ვახშამი Post-workout snack-ვარჯიშის შემდგომ
+  
   Return ONLY this JSON format:
 
   {
